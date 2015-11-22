@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Virtual Trial Room</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		 <link href="stylesheet/style.css" type="text/css" rel="stylesheet"/> 
+    	<script src= "Threejs/three/build/three.js"></script>
+    	<script src= "Threejs/three/examples/js/controls/OrbitControls.js"></script>
+    	<script src="Threejs/js/main.js"></script>
+    	<style>
+   		#threeModel {
+    			background-color: transparent;
+    			width: 300px;
+    			height: 500px;
+    			border: 1px solid transparent;
+   				margin: 100px;
+    			padding: 0px;
+    			position: static; /* fixed or static */
+    			
+    		}
+
+    	
+    	</style>
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper" class="wrapper">
+					<div id="header">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">My 3D Model</a></h1>
+								<p>Generate a three dimensional model of yourself!</p>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">Home</a></li>
+									<li>
+										<a href="">About</a>
+										<ul>
+											<li>
+												<a href="#">Meet the Developers</a>
+												<ul>
+													<li><a href="#">Vidushi Rai</a></li>
+													<li><a href="#">Jerry James</a></li>
+													<li><a href="#">Russell Ang</a></li>
+													<li><a href="#">Brian Zhou</a></li>
+													<li><a href="#">Jayaram Yeluri</a></li>
+													<li><a href="#">Sree Kalanadhabhatta</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">My Account</a>
+										<ul>
+											<li><a href="#">My Profile</a></li>
+											<li><a href="my3dmodel.html">My 3D Model</a></li>
+										</ul>
+									</li>
+									<li><a href="shop.html">Shop</a></li>
+									<li><a href="tryiton.html">Try it On</a></li>
+								</ul>
+								<ul style="background:#e97770;" align="right">
+									<li><a href="tryiton.html">Login</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+					<div class="title">Welcome.</div>
+					<div id="main" class="container">
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+
+								<!-- Sidebar -->
+											</header>
+									<div id="sidebar">
+										<section class="box">
+											<header>
+												<h2>You look fabulous!</h2>
+											<p>Hey there! New to this site? Don't worry, we'll walk you through the process!</p>
+											<!--<a href="#" class="button style1">Learn More</a>-->
+										</section>
+										<section class="box">
+											<header>
+												<h2>Helpful Tips:</h2>
+											</header>
+											<ul class="style2">
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Step 1</a></h3>
+														<p>Brief description or hints about step 1 or something like that? How to stand, be still things like that. Picture shows someone demonstrating. Could be one of us.</p>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic09.jpg" alt="" /></a>
+														<h3><a href="#">Step 2</a></h3>
+														<p>Twirl slowly. We're not teaching you salsa.</p>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic10.jpg" alt="" /></a>
+														<h3><a href="#">Step 3</a></h3>
+														<p>Wait 30 seconds. Recognized you? Congrats, you have a creepy replica of you twirling on your screen.</p>
+													</article>
+												</li>
+											</ul>
+											<!--<a href="#" class="button style1">Archives</a>-->
+										</section>
+										<!-- <section class="box">
+											<header>
+												<h2>Magna diam vehicula</h2>
+											</header>
+											<ul class="style3">
+												<li><a href="#">Nulla iaculis egestas varius</a></li>
+												<li><a href="#">Augue massa feugiat quam pretium</a></li>
+												<li><a href="#">Orci sem vel libero cras nisi odio</a></li>
+												<li><a href="#">Sed hendrerit massa nam mattis</a></li>
+												<li><a href="#">Turpis vel leo accumsan aliquet</a></li>
+												<li><a href="#">Dapibus mi fermentum fusce non</a></li>
+												<li><a href="#">Arcu laoreet sapien tempus</a></li>
+												<li><a href="#">Nulla iaculis egestas varius</a></li>
+												<li><a href="#">Augue massa feugiat quam pretium</a></li>
+												<li><a href="#">Orci sem vel libero cras nisi odio</a></li>
+												<li><a href="#">Sed hendrerit massa nam mattis</a></li>
+											</ul>
+										</section> -->
+									</div>
+
+							</div>
+							<div class="8u 12u(mobile) important(mobile)">
+
+								<!-- Content -->
+									<div id="content">
+										<article class="box post">
+											<header class="style1">
+												<h2>This is where all the magic happens!</h2>
+												<p>I know it sounds complex but generating a 3D model of yourself is pretty simple. Just follow the instructions!</p>
+											</header>
+											<div id="threeModel">
+												<script src="Threejs/js/main.js"></script>
+												<!-- <button id="appendClothing"> Click me for happy</button> -->
+											</div>
+											
+
+
+									</div>
+											
+                                            <br>
+                                            <br>
+                                            <br>
+
+										
+ 
+										</article>
+										<!--<div class="row 150%">
+											<div class="6u 12u(mobile)">
+												<section class="box">
+													<header>
+														<h2>Magna pulvinar tempus</h2>
+													</header>
+													<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+													<p>Rutrum bibendum. Proin pellentesque diam non ligula commodo tempor. Vivamus
+													eget urna nibh. Curabitur non fringilla nisl. Donec accumsan interdum nisi, quis
+													tempus.</p>
+													<a href="#" class="button style1">More</a>
+												</section>
+											</div>
+											<div class="6u 12u(mobile)">
+												<section class="box">
+													<header>
+														<h2>Magna pulvinar tempus</h2>
+													</header>
+													<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+													<p>Rutrum bibendum. Proin pellentesque diam non ligula commodo tempor. Vivamus
+													eget urna nibh. Curabitur non fringilla nisl. Donec accumsan interdum nisi, quis
+													tempus.</p>
+													<a href="#" class="button style1">More</a>
+												</section>
+											</div>
+										</div>-->
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Highlights 
+				<div class="wrapper style3">
+					<div class="title">The Endorsements</div>
+					<div id="highlights" class="container">
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+									<h3><a href="#">Aliquam diam consequat</a></h3>
+									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+									<h3><a href="#">Mattis tempus lorem</a></h3>
+									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>-->
+
+			<!-- Footer -->
+				<div id="footer-wrapper" class="wrapper">
+					<div class="title">Contact Us!</div>
+					<div id="footer" class="container">
+						<header class="style1">
+							<h2>Trying to get in touch?</h2>
+							<p>
+								Shoot us an email or follow us to keep up with what we're up to!
+							</p>
+						</header>
+						<hr />
+						<div class="row 150%">
+							<div class="6u 12u(mobile)">
+
+								<!-- Contact Form -->
+									<section>
+										<form method="post" action="#">
+											<div class="row 50%">
+												<div class="6u 12u(mobile)">
+													<input type="text" name="name" id="contact-name" placeholder="Name" />
+												</div>
+												<div class="6u 12u(mobile)">
+													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+											</div>
+											<div class="row 50%">
+												<div class="12u">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+											</div>
+											<div class="row">
+												<div class="12u">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send" /></li>
+														<li><input type="reset" class="style2" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</div>
+							<div class="6u 12u(mobile)">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-home">Mailing Address</h3>
+													<p>
+														University of Illinois at Urbana-Champaign<br />
+														Somewhere in the middle<br />
+														Of nothing<br />
+														Urbana, Illinois
+													</p>
+												</section>
+											</div>
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-comment">Social</h3>
+													<p>
+														<a href="#">@untitled-corp</a><br />
+														<a href="#">linkedin.com/untitled</a><br />
+														<a href="#">facebook.com/untitled</a>
+													</p>
+												</section>
+											</div>
+										</div>
+										<div class="row">
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-envelope">Email</h3>
+													<p>
+														<a href="#">info@untitled.tld</a>
+													</p>
+												</section>
+											</div>
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 class="icon fa-phone">Phone</h3>
+													<p>
+														(000) 555-0000
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<hr />
+					</div>
+					<div id="copyright">
+						<ul>
+							<li>&copy; Untitled.</li><li>Design: Anything</li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
