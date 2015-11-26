@@ -12,7 +12,14 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		 <link href="stylesheet/style.css" type="text/css" rel="stylesheet"/> 
+		 <link  rel="stylesheet" href="stylesheet/style.css" type="text/css"/>
+
+		<script src='main.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<script src='assets/js/checklogin.js'></script>
+		<script src='assets/js/redirectlogin.js'></script>
+
     	<script src= "Threejs/three/build/three.js"></script>
     	<script src= "Threejs/three/examples/js/controls/OrbitControls.js"></script>
     	<script src="Threejs/js/main.js"></script>
@@ -74,8 +81,8 @@
 									<li><a href="shop.html">Shop</a></li>
 									<li><a href="tryiton.html">Try it On</a></li>
 								</ul>
-								<ul style="background:#e97770;" align="right">
-									<li><a href="tryiton.html">Login</a></li>
+								<ul style="background:#e97770;position: absolute;right:1.5em;">
+									<li><a class="loginout" href="login.html">Login</a></li>
 								</ul>
 							</nav>
 
@@ -90,13 +97,14 @@
 							<div class="4u 12u(mobile)">
 
 								<!-- Sidebar -->
-											</header>
+											
 									<div id="sidebar">
 										<section class="box">
 											<header>
 												<h2>You look fabulous!</h2>
 											<p>Hey there! New to this site? Don't worry, we'll walk you through the process!</p>
 											<!--<a href="#" class="button style1">Learn More</a>-->
+											</header>
 										</section>
 										<section class="box">
 											<header>
@@ -151,28 +159,30 @@
 							<div class="8u 12u(mobile) important(mobile)">
 
 								<!-- Content -->
-									<div id="content">
-										<article class="box post">
-											<header class="style1">
-												<h2>This is where all the magic happens!</h2>
-												<p>I know it sounds complex but generating a 3D model of yourself is pretty simple. Just follow the instructions!</p>
-											</header>
-											<div id="threeModel">
-												<script src="Threejs/js/main.js"></script>
-												<!-- <button id="appendClothing"> Click me for happy</button> -->
-											</div>
+										<div id="content">
+											<article class="box post">
+												<header class="style1">
+													<h2>This is where all the magic happens!</h2>
+													<p>I know it sounds complex but generating a 3D model of yourself is pretty simple. Just follow the instructions!</p>
+												</header>
+												<div id="threeModel">
+													<script src="Threejs/js/main.js"></script>
+
+													<!-- <button id="appendClothing"> Click me for happy</button> -->
+												</div>
 											
 
-
-									</div>
-											
-                                            <br>
-                                            <br>
-                                            <br>
 
 										
- 
-										</article>
+												
+	                                            <br>
+	                                            <br>
+	                                            <br>
+
+											
+	 
+											</article>
+										</div>
 										<!--<div class="row 150%">
 											<div class="6u 12u(mobile)">
 												<section class="box">
@@ -345,7 +355,6 @@
 					</div>
 				</div>
 
-		</div>
 
 		<!-- Scripts -->
 			

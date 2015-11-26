@@ -11,6 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script src='main.js'></script>
+		<script src='assets/js/checklogin.js'></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
@@ -48,18 +52,18 @@
 										</ul>
 									</li>
 									<li>
-										<a href="#">My Account</a>
-										<ul>
-											<li><a href="#">My Profile</a></li>
-											<li><a href="my3dmodel.html">My 3D Model</a></li>
-										</ul>
-									</li>
-									<li><a href="shop.html">Shop</a></li>
-									<li><a href="tryiton.html">Try it On</a></li>
-								</ul>
-								<ul style="background:#e97770;" align="right">
-									<li><a href="tryiton.html">Login</a></li>
-								</ul>
+                                        <a class="loginout" href="my3dmodel.html">My Account</a>
+                                        <ul>
+                                            <li><a class="loginout" href="my3dmodel.html">My Profile</a></li>
+                                            <li><a class="loginout" href="my3dmodel.html">My 3D Model</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="tryiton.html">Try it On</a></li>
+                                </ul>
+                                <ul style="background:#e97770;position: absolute;right:1.5em;">
+                                    <li><a class="loginout logtext" href="login.html">Login</a></li>
+                                </ul>
 							</nav>
 
 					</div>
@@ -71,7 +75,7 @@
 					<section id="intro" class="container">
 						<p class="style1">What is the Virtual Trial Room?</p>
 						<p class="style2">
-							VTR is a tool to display how clothing <i>actually</i> looks on you.  </a>
+							VTR is a tool to display how clothing <i>actually</i> looks on you.
 						</p>
 						<p class="style3">It's <strong>responsive</strong>, utilizing a <strong>Kinect</strong> to generate an precise 3-D model.
 						This would be a perfect solution for those who want to see clothing before they actually buy it.</p>

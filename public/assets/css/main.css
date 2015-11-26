@@ -2013,6 +2013,7 @@
 				left: 0;
 				width: 100%;
 				text-align: center;
+				font-weight: bold;
 			}
 
 				#nav > ul {
@@ -2038,10 +2039,10 @@
 							color: rgba(255, 255, 255, 0.75);
 							text-transform: uppercase;
 							text-decoration: none;
-							font-size: 0.7em;
+							font-size: 0.9em;
 							letter-spacing: 0.25em;
-							height: 5em;
-							line-height: 5em;
+							height: 4.25em;
+							line-height: 4.25em;
 							-moz-transition: all .25s ease-in-out;
 							-webkit-transition: all .25s ease-in-out;
 							-o-transition: all .25s ease-in-out;
@@ -2061,7 +2062,7 @@
 			.dropotron {
 				background: #222835 url("images/overlay.png");
 				background-color: rgba(44, 50, 63, 0.925);
-				padding: 1.25em 1em 1.25em 1em;
+				padding: .25em 1em .25em 1em;
 				border-radius: 0.35em;
 				box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
 				min-width: 12em;
@@ -2090,7 +2091,7 @@
 					font-size: 0.7em;
 					letter-spacing: 0.25em;
 					border-top: solid 1px rgba(255, 255, 255, 0.15);
-					line-height: 3em;
+					line-height: 3.25em;
 				}
 
 				.dropotron li:first-child a, .dropotron li:first-child span {
@@ -2686,17 +2687,9 @@
 						#copyright ul li:first-child {
 							margin-top: 0;
 						}
-						#Jbox{
-                             width: 10em;
-                             height: 10em;
-                             color: black;
-                             overflow:hidden;
-
-
-						}
 						input[type=file] { 
     					width: 1px; 
-    					visibility: hidden;
+   						 display: none;
 }
 
 	}

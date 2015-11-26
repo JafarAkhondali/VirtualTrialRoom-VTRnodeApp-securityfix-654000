@@ -11,6 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script src='assets/js/checklogin.js'></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body class="left-sidebar">
@@ -47,18 +50,18 @@
 										</ul>
 									</li>
 									<li>
-										<a href="#">My Account</a>
-										<ul>
-											<li><a href="#">My Profile</a></li>
-											<li><a href="my3dmodel.html">My 3D Model</a></li>
-										</ul>
-									</li>
-									<li><a href="shop.html">Shop</a></li>
-									<li><a href="tryiton.html">Try it On</a></li>
-								</ul>
-								<ul style="background:#e97770;" align="right">
-									<li><a href="tryiton.html">Login</a></li>
-								</ul>
+                                        <a class="loginout" href="#">My Account</a>
+                                        <ul>
+                                            <li><a class="loginout" href="#">My Profile</a></li>
+                                            <li><a class="loginout" href="my3dmodel.html">My 3D Model</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="tryiton.html">Try it On</a></li>
+                                </ul>
+                                <ul style="background:#e97770;position: absolute;right:1.5em;">
+                                    <li><a class="loginout logtext" href="login.html">Login</a></li>
+                                </ul>
 							</nav>
 
 					</div>
@@ -170,22 +173,21 @@
 					</div>
 				</div> -->
 
-			<!-- Footer
+			<!-- Footer-->
 				<div id="footer-wrapper" class="wrapper">
-					<div class="title">The Rest Of It</div>
+					<div class="title">Contact Us!</div>
 					<div id="footer" class="container">
 						<header class="style1">
-							<h2>Ipsum sapien elementum portitor?</h2>
+							<h2>Trying to get in touch?</h2>
 							<p>
-								Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-								Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
+								Shoot us an email or follow us to keep up with what we're up to!
 							</p>
 						</header>
 						<hr />
 						<div class="row 150%">
 							<div class="6u 12u(mobile)">
 
-								<! Contact Form
+								 <!--Contact Form-->
 									<section>
 										<form method="post" action="#">
 											<div class="row 50%">
@@ -213,7 +215,7 @@
 									</section>
 
 							</div>
-							<div class="6u 12u(mobile)"> --> 
+							<div class="6u 12u(mobile)">
 
 								<!-- Contact -->
 									<section class="feature-list small">

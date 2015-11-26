@@ -7,6 +7,9 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script src='assets/js/checklogin.js'></script>
 	</head>
 	<body class="left-sidebar">
 		<div id="page-wrapper">
@@ -42,18 +45,18 @@
 										</ul>
 									</li>
 									<li>
-										<a href="#">My Account</a>
-										<ul>
-											<li><a href="#">My Profile</a></li>
-											<li><a href="my3dmodel.html">My 3D Model</a></li>
-										</ul>
-									</li>
-									<li><a href="shop.html">Shop</a></li>
-									<li><a href="tryiton.html">Try it On</a></li>
-								</ul>
-								<ul style="background:#e97770;" align="right">
-									<li><a href="tryiton.html">Login</a></li>
-								</ul>
+                                        <a class="loginout" href="#">My Account</a>
+                                        <ul>
+                                            <li><a class="loginout" href="#">My Profile</a></li>
+                                            <li><a class="loginout" href="my3dmodel.html">My 3D Model</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="tryiton.html">Try it On</a></li>
+                                </ul>
+                                <ul style="background:#e97770;position: absolute;right:1.5em;">
+                                    <li><a class="loginout logtext" href="login.html">Login</a></li>
+                                </ul>
 							</nav>
 
 					</div>
