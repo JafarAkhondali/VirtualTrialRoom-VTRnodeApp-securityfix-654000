@@ -9,7 +9,16 @@
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script src='assets/js/path.js'></script>
+        <script src='assets/js/jquery-2.js'></script>
+        <script src='assets/js/jquery.js'></script>
+        <script src='assets/js/login.js'></script>
         <script src='assets/js/checklogin.js'></script>
+        <style type="text/css">
+    form {
+    display: none;
+}
+  </style>
     </head>
     <body class="left-sidebar">
         <div id="page-wrapper">
@@ -71,7 +80,11 @@
                             <div id="content">
                                 <article class="box post">
                                     <header class="style1">
-                                        <h2>Please enter your Email and Password<h2>
+                                    <!-- <div id="alert" class="alert alert-info" role="alert">
+                                        <h4 id="alert-title">You are not logged in</h4>
+                                        <p id="alert-detail"></p>
+                                    </div> -->
+                                        <h2>Please enter your Email and Password</h2>
                                             <!-- <input type="file" id="uploadme" />
                                             <input type="button" id="clickme" value="Upload your 3D Model" /> -->
                                             <!-- <p>
@@ -79,7 +92,7 @@
                                             </p> -->
                                     </header>
                                     <section>
-                                        <form method="post" action="#">
+                                        <form style="display: block;" id="frmLogin" role="form">
                                             <div class="row 50%" style="margin-right: 15%;margin-left: 15%;">
                                                 <div class="12u(mobile)" style="width:100%">
                                                     <label for="login-email">Email address</label>
@@ -92,11 +105,12 @@
                                                     <input type="password" name="password" id="login-pwd" placeholder="123456" />
                                                 </div>
                                             </div>
+                                            
                                             <div class="row 50%" style="margin-right: 15%;margin-left: 15%;">
                                                 <div class="12u" style="width:100%; margin-top: 1.5em;">
                                                     <ul class ="actions" >
-                                                        <li><input type="submit" class="style1" value="Login" /></li>
-                                                        <li><input type="submit" class="style3" value="Register" /></li>
+                                                        <li><button type="submit" class="style1" value="Login" id="loginButton">Login</button></li>
+                                                        <li><button type="register" class="style3" value="Register" id="registerButton">Register</button></li>
                                                     </ul>
                                                 </div>
                                             </div>
