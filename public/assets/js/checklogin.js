@@ -8,6 +8,7 @@ function start(){
     var auth=rootRef.getAuth();
     if(auth){
         $('.logtext').text("Logout").attr("href","").on('click',unauthenticate);
+        $('#accountText').text(auth.password.email+"");
     }else{
         $('.loginout').attr("href","login.html");
         $('.logtext').text("Login").on('click',function(){});
@@ -18,8 +19,9 @@ function start(){
         if(loggedOut){
             $('.logtext').text("Login").on('click',function(){});
             $('.loginout').attr("href","login.html");
+            $('#accountText').text("My Account");
         }else{
-            alert("didn't work");
+            console.log("Error when attemtping to unauthenticate user");
         }
     }
 
