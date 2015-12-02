@@ -1,10 +1,8 @@
+
 // Set up the scene, camera, and renderer as global variables.
 var scene, camera, renderer;
 init();
 animate();
-function test() {
-	alert('hello world1');
-}
 
 
 // Sets up the scene.
@@ -46,18 +44,57 @@ container = document.getElementById("threeModel");
 
   var loader = new THREE.JSONLoader();
   var numOfObjects = 0;
-  loader.load( 'Threejs/sample.js', function(geometry){
-    var material = new THREE.MeshLambertMaterial({color: 0xCCCCCC});
+  load_body("sample",0xffffff);
+
+/*
+Method that loads the body onto the canvas (while applying the appropiate meshes ect.)
+Third parameter will be handled by outside js file that calculates scaling for clothing
+and body position.
+*/
+function load_body(file,color2) {
+    loader.load( 'Threejs/bodies/'+file+'.js', function(geometry){
+    var material = new THREE.MeshLambertMaterial({color: color2});
     var mesh = new THREE.Mesh( geometry, material);
     scene.add(mesh);
     mesh.position.set(0, -1, 0);
+
+  });
+}
+
+function load_clothing(file,color2,state) {
+    if (scene.getObjectByName(file) === undefined) {
+      loader.load( 'Threejs/clothing/'+file+'.js', function(geometry){
+      var material = new THREE.MeshLambertMaterial({color: color2});
+      clothing = new THREE.Mesh( geometry, material);
+      clothing.name = file;
+      scene.add(clothing);
+      clothing.position.set(0.05, -0.05, -0.02);
+      clothing.scale.set(1.3,1,1.5);
+      clothing.translateY(0.01);
+      
+    });
+  }
+  else {
+    scene.remove(scene.getObjectByName(file));
     
+  }
+}
 
-  }); 
+$(document).ready(function(){
+  var state = $("#appendClothing").text();
+  $("#appendClothing").click(function(){
+    load_clothing('basic-shirt',0x00ffcc,state);
+    if (state === "Put it on."){
+    state = "Take it off.";
+    }
+    else {
+      state = "Put it on.";
+    }
+    $("#appendClothing").text(state);
+  });
 
+});
   
- 
-
   
 
   // Add OrbitControls so that we can pan around with the mouse.
@@ -71,3 +108,4 @@ function animate() {
   renderer.render( scene, camera );
   controls.update();
 }
+
