@@ -57,7 +57,7 @@ function load_body(file,color2) {
     var material = new THREE.MeshLambertMaterial({color: color2});
     var mesh = new THREE.Mesh( geometry, material);
     scene.add(mesh);
-    mesh.position.set(0, -1 * adjustHeight(, 0);
+    mesh.position.set(0, -1, 0);
 
   });
 }
