@@ -44,6 +44,7 @@ container = document.getElementById("threeModel");
 
   var loader = new THREE.JSONLoader();
   var numOfObjects = 0;
+  //These are hardcoded examples that need to be changed for the next iteration ()
   load_body("sample",0xffffff);
 
 /*
@@ -56,12 +57,12 @@ function load_body(file,color2) {
     var material = new THREE.MeshLambertMaterial({color: color2});
     var mesh = new THREE.Mesh( geometry, material);
     scene.add(mesh);
-    mesh.position.set(0, -1, 0);
+    mesh.position.set(0, -1 * adjustHeight(, 0);
 
   });
 }
 
-function load_clothing(file,color2,state) {
+function load_clothing(file,color2,gender) {
     if (scene.getObjectByName(file) === undefined) {
       loader.load( 'Threejs/clothing/'+file+'.js', function(geometry){
       var material = new THREE.MeshLambertMaterial({color: color2});
