@@ -44,8 +44,8 @@ container = document.getElementById("threeModel");
 
   var loader = new THREE.JSONLoader();
   var numOfObjects = 0;
-  //These are hardcoded examples that need to be changed for the next iteration ()
-  load_body("sample",0xffffff);
+  //Username given by firebase is here
+  load_body("russell",0xffffff);
 
 /*
 Method that loads the body onto the canvas (while applying the appropiate meshes ect.)
@@ -69,9 +69,15 @@ function load_clothing(file,color2,gender) {
       clothing = new THREE.Mesh( geometry, material);
       clothing.name = file;
       scene.add(clothing);
-      clothing.position.set(0.05, -0.05, -0.02);
-      clothing.scale.set(1.3,1,1.5);
-      clothing.translateY(0.01);
+      //clothing.position.set(0.05, -0.05, -0.02);
+      clothing.scale.set(1,1,1.3);
+      if (file === "skirt"){
+        clothing.translateY(-1);
+      }
+      else {
+      clothing.translateY(-0.07);
+      } 
+      //clothing.scale.set(1.1,1.1,1.4);
       
     });
   }
@@ -81,20 +87,30 @@ function load_clothing(file,color2,gender) {
   }
 }
 
-$(document).ready(function(){
-  var state = $("#appendClothing").text();
-  $("#appendClothing").click(function(){
-    load_clothing('basic-shirt',0x00ffcc,state);
-    if (state === "Put it on."){
-    state = "Take it off.";
-    }
-    else {
-      state = "Put it on.";
-    }
-    $("#appendClothing").text(state);
-  });
 
+$(document).ready(function(){
+  var clothing;
+  var buttonText;
+  $(".clothing").on("click",function() {
+      clothing = $(this).attr("id");
+      buttonText = $(this).text();
+      var state = buttonText;
+      //Generates a random color.
+      var color = Math.floor(Math.random()*16777215);
+      load_clothing(clothing,color,"male");
+      if (buttonText !== "Try it on."){
+       state = "Take it off.";
+      }
+      else {
+        state = "Try it on.";
+      }
+      $(buttonText).text(state);
+
+  });
 });
+ 
+ 
+
   
   
 
